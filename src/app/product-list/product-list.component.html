@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="item" *ngFor="let product of products; index as i">
+    <img src="./assets/{{ product.image }}" alt="" class="im" />
+
+    <h2 class="header">{{ product.name }}</h2>
+
+    <p>
+      Price: <span>$ {{ product.price }}</span>
+    </p>
+
+    <p>
+      {{ product.description }}
+    </p>
+    <footer>
+      <a mat-flat-button color="primary" (click)="addCart(product)"
+        ><mat-icon
+          class="example-icon"
+          aria-hidden="false"
+          aria-label="Example heart icon"
+          >shopping_cart</mat-icon
+        >
+        Add to Cart</a
+      >
+    </footer>
+  </div>
+</div>
